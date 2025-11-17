@@ -5,26 +5,60 @@
         <title>HtmlCreator Web</title>
         <script src="HtmlCreator.js"></script>
         <link rel="icon" type="image/png" href="HtmlCreatorBeta.png">
+        <link rel="stylesheet" href="CSS/Home.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
     </head>
     <body>
-        <button type="button" onclick="download_W()">Download</button>
-        <input type="text" id="title_e" name="title" placeholder="Enter Title of Website">
-        <button type="button" onclick="settitle()">Set</button>
-        <div style="width: 100px; margin-right: 5%; float: right;">
-            <a href="https://github.com/RadicliesYT/HtmlCreator">
-            <img width="50px" height="50px" style="margin-left:100px;" src="HtmlCreatorBeta.png">
-            </a>
+        <ul>
+            <h3 class="main-title">HtmlCreator Web</h3>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+        <div class="options-container">
+            <div class="options-acutal-container">
+                <input type="text" id="title_e" name="title" placeholder="Enter Title of Website">
+                <button class="mini-button" type="button" onclick="settitle()">Set</button>
+                <!-- <div style="width: 100px; margin-right: 5%; float: right;">
+                    <a href="https://github.com/RadicliesYT/HtmlCreator">
+                    <img width="50px" height="50px" style="margin-left:100px;" src="HtmlCreatorBeta.png">
+                    </a>
+                </div> -->
+                <br>
+                <input style="margin-top: 10px;" type="text" id="text" name="text" placeholder="Enter Text on Website">
+                <button class="mini-button" type="button" onclick="settext()">Set</button>
+                <br>
+                <input style="margin-top: 10px;" type="text" id="bgcolor" name="bgcolor" placeholder="Enter color of Website">
+                <button class="mini-button" type="button" onclick="setbgcolor()">Set</button>
+                <br>
+                <input style="margin-top: 10px;" type="text" id="txtcolor" name="txtcolor" placeholder="Enter color of Text">
+                <button class="mini-button" type="button" onclick="settxtcolor()">Set</button>
+                <br>
+                <input style="margin-top: 10px;" type="text" id="txtfont" name="txtfont" placeholder="Enter Font of Text">
+                <button class="mini-button" type="button" onclick="settxtfont()">Set</button>
+                <br>
+
+                <div class="radio-div">
+                    <form id = "sigma">
+                    <input type="radio" id="txtalign" name="txtalign" value="left">
+                    <label for="html">left</label>
+                    <input type="radio" id="txtalign" name="txtalign" value="center">
+                    <label for="html">center</label>
+                    <input type="radio" id="txtalign" name="txtalign" value="right">
+                    <label for="html">right</label> 
+                    <button type="button" onclick="settxtalign()">Set</button>
+                </form>
+                </div>
+                <br>
+
+            </div>
+                <button class="button-create" type="button" onclick="Create_W()">Create Website</button>
+                <button class="button-download" type="button" onclick="download_W()">Download</button>
         </div>
-        <br>
-        <input style="margin-left: 80px; margin-top: 10px;" type="text" id="text" name="text" placeholder="Enter Text on Website">
-        <button type="button" onclick="settext()">Set</button>
-        <br>
-        <input style="margin-left: 80px; margin-top: 10px;" type="text" id="bgcolor" name="bgcolor" placeholder="Enter color of Website">
-        <button type="button" onclick="setbgcolor()">Set</button>
-        <br>
-        <input style="margin-left: 80px; margin-top: 10px;" type="text" id="txtcolor" name="txtcolor" placeholder="Enter color of Text">
-        <button type="button" onclick="settxtcolor()">Set</button>
-        <br>
-        <button style="margin-left: 80px; margin-top: 10px;" type="button" onclick="Create_W()">Create Website</button>
+
+        <main>
+            <h2 class="preview-title">Preview:</h2>
+        </main>
     </body>
 </html>

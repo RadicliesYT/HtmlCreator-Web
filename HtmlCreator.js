@@ -4,6 +4,8 @@
     let bgweb;
     let rcss;
     let colortxt;
+    let font;
+    let talign;
     function settitle(){
         title = document.getElementById("title_e").value;
     }
@@ -20,8 +22,19 @@
         colortxt = document.getElementById("txtcolor").value;
     }
 
+    function settxtfont(){
+        font = document.getElementById("txtfont").value;
+    }
+
+    function getAlign(){
+        talign = document.getElementById("txtalign").value;
+    }
+
+    
+
     function Create_W(){
-        html = "<Html><head><link rel='stylesheet' href='herro.css'><title>";
+        html = "<Html><head><link rel='stylesheet' href='herro.css'>";
+        html += "<link rel='icon' type='image/x-icon'  href='creator.png'><title>"
         html+= title;
         html += "</title></head><body class ='tuff'><h1>"
         html += text;
@@ -32,6 +45,12 @@
         rcss += bgweb
         rcss += ";} h1{color:"
         rcss += colortxt
+        rcss += ";"
+        rcss += "font-family:"
+        rcss += font
+        rcss += ";"
+        rcss += "text-align:"
+        rcss += selectedalign
         rcss += ";}"
     }
     
@@ -51,6 +70,22 @@
 
     }
 
+    function downloadImage(imageUrl, filename) {
+    fetch(imageUrl)
+        .then(res => res.blob())
+        .then(blob => {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        })
+        .catch(err => console.error("Download failed:", err));
+    }
+
     function CSS_W(filename,mimeType){
         const stylesheet = new Blob([rcss], { type: mimeType });
         const url2 = URL.createObjectURL(stylesheet);
@@ -66,5 +101,15 @@
     function download_W(){
         downloadFile('herro.html','text/plain');
         CSS_W('herro.css','text/plain');
-        
+        downloadImage('https://i.scdn.co/image/ab67616d0000b273aa10e1385ba90132bd774f3c', 'creator.png');
+    }
+
+    function settxtalign(){
+        const selectedRadio = document.querySelector('input[name="txtalign"]:checked');
+
+        if (selectedRadio) {
+            selectedalign = selectedRadio.value;
+        } else {
+            selectedalign = "center"
+        }
     }

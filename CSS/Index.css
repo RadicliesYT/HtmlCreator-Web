@@ -1,0 +1,139 @@
+body{
+    background-image: url("https://pbs.twimg.com/media/GvGWiO6WgAAc6l6?format=jpg&name=4096x4096");
+    background-size: cover;
+    background-attachment: fixed;;
+    background-repeat: no-repeat;;
+    background-position: center;
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #051214;
+    align-items: Left;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    width: 99%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+li{
+    color: white;
+    text-decoration: none;
+    margin-top: 33px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a::hover{
+    color: grey;
+    box-shadow:
+    0px 6px 18px rgba(19, 235, 188, 0.35),
+    inset 0px 2px 3px rgba(59, 21, 231, 0.25);
+}
+
+.main-title{
+    width: fit-content;
+    color: white;
+    margin-left: 30px;
+    margin-top: 33px;
+    margin-bottom: 10px;
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.options-container{
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.options-acutal-container{
+    width: fit-content;
+    padding: 20px;
+    border-radius: 18px;
+    background: #1e1e1e;
+    border: 1px solid #2c2c2c;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.35);
+    font-family: sans-serif;
+    color: #eee;
+}
+
+input{
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    font-size: 14px;
+    background: #2a2a2a;
+    color: white;
+}
+
+input::placeholder {
+  color: #f0f0f0;
+}
+
+.mini-button{
+    padding: 8px 18px;
+    background: white;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.button-create{
+    background: linear-gradient(180deg, #ff3939, #1abb58);
+    color: black;
+    box-shadow:
+        0px 6px 18px rgba(80, 80, 255, 0.35),
+        inset 0px 2px 3px rgba(255, 255, 255, 0.25);
+    border: none;
+    position: relative;
+    padding: 12px 20px 10px;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.button-download{
+    background: linear-gradient(180deg, #be3030, rgb(223, 149, 116));
+    color: black;
+    box-shadow:
+        0px 6px 18px rgba(80, 80, 255, 0.35),
+        inset 0px 2px 3px rgba(255, 255, 255, 0.25);
+    border: none;
+    position: relative;
+    padding: 12px 20px 10px;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.button-create:hover, .button-download:hover{
+    cursor: pointer;
+    background: linear-gradient(180deg, #1abb58, #ff3939);
+}

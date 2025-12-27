@@ -3,8 +3,8 @@
     let text;
     let bgweb;
     let rcss;
-    let colortxt;
-    let font;
+    let colortxt = 'White';
+    let font = 'Arial';
     let talign;
     function settitle(){
         title = document.getElementById("title_e").value;
@@ -23,7 +23,11 @@
     }
 
     function settxtfont(){
-        font = document.getElementById("txtfont").value;
+        selectElement = document.getElementById('fontbox');
+        selectedValue = selectElement.value;
+        //selectedText = selectElement.options[selectElement.selectedIndex].text;
+        font = selectedValue;
+        //font = document.getElementById("txtfont").value;
     }
 
     function getAlign(){
@@ -33,8 +37,8 @@
     
 
     function Create_W(){
-        html = "<Html><head><link rel='stylesheet' href='herro.css'>";
-        html += "<link rel='icon' type='image/x-icon'  href='creator.png'><title>"
+        html = "<Html><head><link rel='stylesheet' href='herro.css'><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>"
+        html += "<link href='https://fonts.googleapis.com/css2?family=Playwrite+US+Trad+Guides&display=swap' rel='stylesheet'>;<link rel='icon' type='image/x-icon'  href='creator.png'><title>"
         html+= title;
         html += "</title></head><body class ='tuff'><h1>"
         html += text;
@@ -101,7 +105,8 @@
     function download_W(){
         downloadFile('herro.html','text/plain');
         CSS_W('herro.css','text/plain');
-        downloadImage('https://i.scdn.co/image/ab67616d0000b273aa10e1385ba90132bd774f3c', 'creator.png');
+        downloadImage('bubu.png', 'creator.png');
+        //https://i.scdn.co/image/ab67616d0000b273aa10e1385ba90132bd774f3c
     }
 
     function settxtalign(){

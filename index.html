@@ -6,7 +6,7 @@
         <title>HtmlCreator Web</title>
         <script src="HtmlCreator.js"></script>
         <link rel="icon" type="image/png" href="HtmlCreatorBeta.png">
-        <link rel="stylesheet" href="CSS/Home.css">
+        <link rel="stylesheet" href="CSS/Index.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,9 @@
     <body>
         <ul>
             <h3 class="main-title">HtmlCreator Web</h3>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="Home.html"><span style="color:red;">Home</span></a></li>
+            <li><a href="index.html"><span style="color:lightblue;">Make Sites!</span></a></li>
+            <li><a href="About.html">About</a></li>
         </ul>
         <div class="options-container">
             <div class="options-acutal-container">
@@ -36,7 +38,17 @@
                 <input style="margin-top: 10px;" type="text" id="txtcolor" name="txtcolor" placeholder="Enter color of Text">
                 <button class="mini-button" type="button" onclick="settxtcolor()">Set</button>
                 <br>
-                <input style="margin-top: 10px;" type="text" id="txtfont" name="txtfont" placeholder="Enter Font of Text">
+                <!--<input style="margin-top: 10px;" type="text" id="txtfont" name="txtfont" placeholder="Enter Font of Text">-->
+                <label for="fontbox">Choose a font:</label>
+                <select id="fontbox" name="font_selection">
+                <option value="Arial">Arial</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Playwrite US Trad Guides">Playwrite US Trad Guides</option>
+                <option value="Roboto">Roboto(mobile)</option>
+                <option value="Segoe UI">Segoe UI</option>
+                <option value="Times New Roman">Times New Roman</option>
+
+                </select>
                 <button class="mini-button" type="button" onclick="settxtfont()">Set</button>
                 <br>
 
